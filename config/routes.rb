@@ -2,6 +2,6 @@ Rails.application.routes.draw do
 
   root to: "todos#index"
 
-  resources :todos, only: :new
+  resources :todos, only: [:index, :new, :create]
 
 end
