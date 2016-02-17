@@ -4,7 +4,7 @@ class User
   end
 
   def todos
-    Todo.where(email: @email)
+    Todo.where(email: @email).order(created_at: :desc)
   end
 
   def signed_in?
